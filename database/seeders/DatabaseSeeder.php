@@ -15,12 +15,11 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         // User::factory(10)->create();
-        $hashedPassword = Hash::make('admin@123');
         DataAdmin::factory()->create([
             'name' => 'Test User',
             'username' => 'test',
             'email' => 'test@example.com',
-            'password' => $hashedPassword
+            'password' => Hash::make('12345678'), 
         ]);
     }
 }
