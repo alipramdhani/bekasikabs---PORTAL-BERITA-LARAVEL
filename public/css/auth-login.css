@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: small;
+    font-family: "Google Sans", sans-serif;
+}
+#header .navbar {
+    height: 80px;
+}
+#home .judul {
+    margin: 100px 100px 10px 100px;
+    gap: 10px;
+}
+#home img {
+    border-radius: 10px;
+}
+#home .text {
+    width: 500px;
+    padding: 40px 0;
+    font-size: 16px;
+    word-wrap: break-word;
+}
+#home .btn-login {
+    color: white;
+    width: auto;
+    background-color: #12372a;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+}
+#home .alert {
+    height: 20px;
+    padding: 0;
+    margin: 10px 0;
+}
+#home .form-control {
+    padding: 10px;
+}

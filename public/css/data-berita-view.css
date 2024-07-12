@@ -1,0 +1,9 @@
+* {
+    font-size: small;
+}
+#canvas {
+    background-color: #f5f5f5;
+}
+#newsTable .newsTable {
+    margin: 80px 30px 20px 270px;
+}

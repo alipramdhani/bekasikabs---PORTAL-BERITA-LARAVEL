@@ -1,0 +1,12 @@
+* {
+    font-size: small;
+}
+#canvas {
+    background-color: #f5f5f5;
+}
+#formAdd .formAdd {
+    margin: 80px 30px 20px 270px;
+}
+#formAdd .formAdd label {
+    font-weight: 600;
+}
