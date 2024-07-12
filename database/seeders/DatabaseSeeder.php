@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\DataAdmin;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
@@ -15,11 +16,11 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         // User::factory(10)->create();
-        DataAdmin::factory()->create([
-            'name' => 'Test User',
+        DB::table('data_admins')->insert([
+            'name' => 'test',
             'username' => 'test',
             'email' => 'test@example.com',
-            'password' => Hash::make('12345678'), 
+            'password' => Hash::make('admin#1234'),
         ]);
     }
 }
