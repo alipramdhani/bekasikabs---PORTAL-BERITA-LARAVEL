@@ -42,11 +42,11 @@ class DataAdminController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Request $request, string $id)
-    {
-        $data_admins = DataAdmin::findOrFail($id);
-        return view('admin.dataAdmin.dataAdminUpdate', compact('data_admins'));
-    }
+    // public function edit(Request $request, string $id)
+    // {
+    //     $data_admins = DataAdmin::findOrFail($id);
+    //     return view('admin.dataAdmin.dataAdminUpdate', compact('data_admins'));
+    // }
     /**
      * Update the specified resource in storage.
      */

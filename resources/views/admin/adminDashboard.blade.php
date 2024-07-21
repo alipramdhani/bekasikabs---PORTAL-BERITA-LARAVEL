@@ -24,7 +24,7 @@
               <li class="breadcrumb-item active" aria-current="page">Data Admin</li>
             </ol>
         </nav> --}}
-        <div class="d-flex justify-content-center border">
+        <div class="d-flex justify-content-center">
             <div class="container rounded-2 shadow-sm p-5 m-3 bg-white">
                 <h3 class="text-center mb-3">Selamat Datang Di Portal Admin Bekasikabs</h3>
             </div>  

@@ -39,31 +39,26 @@ class KategoriController extends Controller
 
         return redirect()->route('data-kategori.kategori')->with('success', 'Data berhasil ditambah');
     }
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Request $request, string $id)
-    {
-         $kategoris = Kategori::findOrFail($id);
-        return view('admin.kategori.kategoriUpdate', compact('kategoris'));
-    }
+    
+    
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
-    {
-        $validatedData = $request->validate([
-            'id_kategori' => 'required',
-            'nama_kategori' => 'required|max:255',
-        ]);
+    // public function update(Request $request, string $id)
+    // {
+    //     $validatedData = $request->validate([
+    //         'id_kategori' => 'required',
+    //         'nama_kategori' => 'required|max:255',
+    //     ]);
     
-         $kategoris = Kategori::findOrFail($id);
-         $kategoris->id_kategori = $validatedData['id_kategori'];
-         $kategoris->nama_kategori = $validatedData['nama_kategori'];
-         $kategoris->save();
+    //      $kategoris = Kategori::findOrFail($id);
+    //      $kategoris->id_kategori = $validatedData['id_kategori'];
+    //      $kategoris->nama_kategori = $validatedData['nama_kategori'];
+    //      $kategoris->save();
     
-        return redirect()->route('data-kategori.kategori')->with('success', 'Data berhasil diubah');
-    }
+    //     return redirect()->route('data-kategori.kategori')->with('success', 'Data berhasil diubah');
+    // }
+    
     /**
      * Remove the specified resource from storage.
      */

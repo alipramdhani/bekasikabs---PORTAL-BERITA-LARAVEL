@@ -39,9 +39,25 @@
                   <label for="judul_berita" class="form-label">Judul Berita</label>
                   <input type="text" class="form-control" id="judul_berita" name="judul_berita" required>
                 </div>
+                
+              </div>
+              <div class="d-flex gap-3">
+                <div class="mb-3 flex-fill">
+                  <label for="kategori" class="form-label">Kategori</label>
+                  <select class="form-select" aria-label="Default select example" name="kategori" id="kategori">
+                    <option selected>-- Pilih Kategori --</option>
+                    @foreach($kategoris as $kategori)
+                    <option value="{{ $kategori->nama_kategori }}">{{ $kategori->nama_kategori }}</option>
+                    @endforeach
+                  </select>
+                </div>
                 <div class="mb-3 flex-fill">
                   <label for="tanggal" class="form-label">Tanggal</label>
                   <input type="date" class="form-control" id="tanggal" name="tanggal" required>
+                </div>
+                <div class="mb-3 flex-fill">
+                  <label for="gambar" class="form-label">Gambar</label>
+                  <input type="file" class="form-control" id="gambar" name="gambar" size="20" required>
                 </div>
               </div>
               <div class="mb-3">
@@ -58,25 +74,11 @@
                   <input type="text" class="form-control" id="editor" name="editor" required>
                 </div>
               </div>
-              <div class="d-flex gap-3">
-                <div class="mb-3 flex-fill">
-                  <label for="kategori" class="form-label">Kategori</label>
-                  <select class="form-select" aria-label="Default select example" name="kategori" id="kategori">
-                    <option selected>-- Pilih Kategori --</option>
-                    @foreach($kategoris as $kategori)
-                    <option value="{{ $kategori->nama_kategori }}">{{ $kategori->nama_kategori }}</option>
-                    @endforeach
-                  </select>
-                </div>
-                <div class="mb-3 flex-fill">
-                  <label for="gambar" class="form-label">Gambar</label>
-                  <input type="file" class="form-control" id="gambar" name="gambar" size="20" required>
-                </div>
-              </div>
+              
             </div>
-            <div class="d-flex justify-content-end gap-3">
-              <a href="{{route('data-berita.dataBerita')}}" class="btn btn-danger">Batal</a>
-              <button class="btn btn-success add-confirm" type="submit">Simpan</button>
+            <div class="mt-5 d-flex justify-content-between ">
+              <a href="{{route('data-berita.dataBerita')}}" class="btn btn-danger"><strong>Kembali</strong></a>
+              <button class="btn btn-primary add-confirm" style="width: 150px;" type="submit"><strong>Simpan</strong></button>
             </div>
           </form>
         </div>

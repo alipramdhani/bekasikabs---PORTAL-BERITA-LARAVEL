@@ -1,6 +1,6 @@
 <div class="container rounded-2 shadow-sm p-5 m-3 bg-white">
     <h3 class="text-center mb-5">Tabel Data Admin</h3>
-    <a data-bs-toggle="modal" data-bs-target="#tambahModal" class="btn btn-primary mb-4" href="{{ route('data-admin.create')}}">Tambah Admin</a>
+    <a data-bs-toggle="modal" data-bs-target="#tambahModal" class="btn btn-primary mb-4" style="font-weight: 600;" href="{{ route('data-admin.create')}}">+ Tambah</a>
     <div class="modal fade" id="tambahModal" tabindex="-1" aria-labelledby="tambahModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -48,7 +48,6 @@
         <thead class="table-light">
         <tr>
         <th scope="col">No</th>
-        <th scope="col">ID</th>
         <th scope="col">Nama Lengkap</th>
         <th scope="col">Username</th>
         <th scope="col">Email</th>
@@ -74,10 +73,6 @@
             <tr>
                 <td>
                 {{$key + 1}}
-                </td>
-                <td>
-                    <p>{{$admin->id_admin}}
-                    </p>
                 </td>
                 <td>
                     <p>

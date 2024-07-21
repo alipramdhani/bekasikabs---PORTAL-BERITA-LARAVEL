@@ -1,7 +1,7 @@
 <div class="container rounded-2 shadow-sm p-5 m-3 bg-white">
     <h3 class="text-center mb-5">Tabel Data Berita</h3>
     <div class="d-flex gap-3">
-        <a class="btn btn-primary mb-4 me-auto" href="{{ route('data-berita.create')}}">Tambah Berita</a>
+        <a class="btn btn-primary mb-4 me-auto" style="font-weight: 600;" href="{{ route('data-berita.create')}}">+ Tambah</a>
         <div style="width: 150px;">
             <select class="form-select rounded-pill" aria-label="Default select example" name="kategori" id="kategori">
                 <option selected>Filter</option>
@@ -69,7 +69,7 @@
                 </td>
                 <td style="width:300px;">
                     <p>
-                        {{ limitChars($berita->isi, 500) }}
+                        {{limitChars($berita->isi, 500) }}
                     </p>
                 </td>
                 <td>

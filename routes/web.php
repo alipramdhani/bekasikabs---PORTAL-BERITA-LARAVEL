@@ -2,9 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [App\Http\Controllers\DataBeritaController::class, 'index'])->name('home.index');
+Route::get('/', [App\Http\Controllers\NewsController::class, 'index'])->name('home.index');
 
-Route::get('/logout', [App\Http\Controllers\AuthController::class, 'logout'])->name('admin.logout');
+
+Route::post('/logout', [App\Http\Controllers\AuthController::class, 'logout'])->name('admin.logout');
 
 Route::get('admin', [App\Http\Controllers\AuthController::class, 'showLoginForm'])->name('admin.showLoginForm');
 

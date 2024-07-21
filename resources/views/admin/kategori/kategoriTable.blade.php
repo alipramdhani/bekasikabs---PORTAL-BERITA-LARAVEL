@@ -1,7 +1,7 @@
 <div class="container rounded-2 shadow-sm p-5 m-3 bg-white">
     <h3 class="text-center mb-5">Tabel Data Kategori</h3>
     <div class="d-flex gap-3">
-        <a data-bs-toggle="modal" data-bs-target="#tambahModal" class=" btn btn-primary mb-4" href="{{ route('data-kategori.create')}}">Tambah Kategori</a>
+        <a data-bs-toggle="modal" data-bs-target="#tambahModal" class=" btn btn-primary mb-4" style="font-weight: 600;" href="{{ route('data-kategori.create')}}">+ Tambah</a>
     </div>
 
     <div class="modal fade" id="tambahModal" tabindex="-1" aria-labelledby="tambahModalLabel" aria-hidden="true">
@@ -85,46 +85,6 @@
                     <p>
                     {{ $kategori->updated_at }}
                     </p>
-                </td>
-                <td style="width:50px; vertical-align: middle;">
-                    <a data-bs-toggle="modal" data-bs-target="#editModalKategori_{{ $kategori->id_kategori }}" class="p-0" href="#">
-                        <span class="rounded p-2 bg-warning material-symbols-outlined m-0 " style="color: black;" >
-                        edit_square
-                        </span>
-                    </a>
-                    <div class="modal fade" id="editModalKategori_{{ $kategori->id_kategori }}" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <form method="POST" enctype="multipart/form-data" action="{{ route('data-kategori.update', ['id' => $kategori->id_kategori])}}" >
-                              @csrf
-                              @method('PUT')
-                              <div class="text-center mb-3">
-                                <div class="modal-header">
-                                  <h3 class="modal-title" id="editModalLabel">Edit Kategori</h3>
-                                </div>
-                              </div>
-                              <div class="modal-body px-4">
-                                <div class="mb-3 flex-fill">
-                                  <label for="id_kategori" class="form-label">ID Kategori</label>
-                                  <input type="text" class="form-control text-black-50" id="id_kategori" name="id_kategori"
-                                  value="{{$kategori->id_kategori}}" readonly>
-                                </div>
-                                <div class="mb-3 flex-fill">
-                                  <label for="nama_kategori" class="form-label">Kategori</label>
-                                  <input type="text" class="form-control" id="nama_kategori" name="nama_kategori"
-                                  value="{{$kategori->nama_kategori}}" required>
-                                </div>
-                              </div>  
-                              <div class="modal-footer">
-                                <div class="d-flex justify-content-end gap-3">
-                                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Batal</button>
-                                  <button class="btn btn-success update-confirm" type="submit">Simpan</button>
-                                </div>
-                              </div>
-                            </form>
-                          </div>
-                        </div>
-                    </div>
                 </td>
                 <td style="width:50px; vertical-align: middle;">
                     <form method="POST" action="{{ route('data-kategori.destroy', $kategori->id_kategori) }}">

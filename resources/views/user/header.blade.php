@@ -20,12 +20,6 @@
                 <a class="nav-link" href="{{('/')}}">Beranda</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#section-3">Nasional</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Jawab Barat</a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link" href="#">Pemerintahan</a>
             </li>
             <li class="nav-item">
@@ -35,19 +29,11 @@
                 <a class="nav-link" href="#">Ekonomi</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Umum</a>
+                <a class="nav-link" href="#section-3">Nasional</a>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Olah Raga</a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a class="dropdown-item" href="#">PEPARDA VI</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#">PORPROV XIV</a>
-                    </li>
-                </ul>
-                </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Jawab Barat</a>
+            </li>
             <li class="nav-item">
             <a class="nav-link" href="#">Teknologi</a>
             </li>

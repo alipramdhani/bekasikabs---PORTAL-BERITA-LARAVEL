@@ -16,20 +16,35 @@
 <body>
     {{-- header start --}}
     <section id="header">
-      <div class="p-5">
+      <div class="p-4">
         @include('user.header')
       </div>
     </section>
     {{-- header end --}}
 
-      {{-- Section 1-3 --}}
-      <div class="m-2 border">
+    {{-- Konten --}}
+    {{-- Section-1 Start --}}
+    <section id="section-1">
+      <div class="container-fluid row">
+          {{-- Slide news --}}
+          <div id="carousel" class="col-8 px-5">
+            @include('user.layouts.slides')
+          </div>
+  
+          {{-- Pengumuman news --}}
+          <div id="terkini" class="col-4 border-start px-5 pt-5" style="overflow-y: auto;">
+            @include('user.layouts.pengumuman')
+          </div>
+      </div>
+  </section>
+
+      {{-- <div class="m-2 border">
         <div>
           @include('user.layouts.section-1')
           @include('user.layouts.section-2')
           @include('user.layouts.section-3')
         </div>
-      </div>
+      </div> --}}
 
       {{-- header start --}}
     <section id="footer">

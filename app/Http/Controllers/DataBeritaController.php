@@ -7,16 +7,10 @@ use App\Models\Kategori;
 use App\Models\DataBerita;
 class DataBeritaController extends Controller
 {
-    public function index()
-    {
-        $data_beritas =  DataBerita::all();
-        return view('user.portal-berita', compact('data_beritas'));
-    }
     public function dataBerita()
     {
         $data_beritas =  DataBerita::paginate(5);
-        $data_terkinis = DataBerita::orderBy('tanggal', 'asc')->take(5)->get();
-        return view('admin.dataBerita.dataBeritaView', compact('data_beritas', 'data_terkinis'));
+        return view('admin.dataBerita.dataBeritaView', compact('data_beritas'));
     }
     /**
      * Show the form for creating a new resource.

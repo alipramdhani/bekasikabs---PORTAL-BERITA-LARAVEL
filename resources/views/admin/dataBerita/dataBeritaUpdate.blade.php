@@ -43,10 +43,28 @@
                     <input type="text" class="form-control" id="judul_berita" name="judul_berita"
                     value="{{$data_beritas->judul_berita}}">
                   </div>
+                </div>
+                <div class="d-flex gap-3">
+                  <div class="mb-3 flex-fill">
+                    <label for="kate" class="form-label">Kategori</label>
+                    <select class="form-select" aria-label="Default select example" name="kategori" id="kategori">
+                      <option selected>-- Pilih Kategori --</option>
+                      @foreach ($kategoris as $kategori)
+                          <option value="{{ $kategori->nama_kategori }}" {{ $data_beritas->kategori == $kategori->nama_kategori ? 'selected' : '' }}>
+                              {{ $kategori->nama_kategori }}
+                          </option>
+                      @endforeach
+                    </select>
+                  </div>
                   <div class="mb-3 flex-fill">
                     <label for="tanggal" class="form-label">Tanggal Berita</label>
                     <input type="date" class="form-control" id="tanggal" name="tanggal"
                     value="{{$data_beritas->tanggal}}">
+                  </div>
+                  <div class="mb-3 flex-fill">
+                    <label for="gambar" class="form-label">Gambar</label>
+                    <input type="file" class="form-control" id="gambar" name="gambar" size="20" require="">
+                    <p class="my-1" style="font-style: italic; color: red;">gambar : {{$data_beritas->gambar}}</p>
                   </div>
                 </div>
                 <div class="mb-3">
@@ -65,28 +83,11 @@
                     value="{{$data_beritas->editor}}">
                   </div>
                 </div>
-                <div class="d-flex gap-3">
-                  <div class="mb-3 flex-fill">
-                    <label for="kate" class="form-label">Kategori</label>
-                    <select class="form-select" aria-label="Default select example" name="kategori" id="kategori">
-                      <option selected>-- Pilih Kategori --</option>
-                      @foreach ($kategoris as $kategori)
-                          <option value="{{ $kategori->nama_kategori }}" {{ $data_beritas->kategori == $kategori->nama_kategori ? 'selected' : '' }}>
-                              {{ $kategori->nama_kategori }}
-                          </option>
-                      @endforeach
-                    </select>
-                  </div>
-                  <div class="mb-3 flex-fill">
-                    <label for="gambar" class="form-label">Gambar</label>
-                    <input type="file" class="form-control" id="gambar" name="gambar" size="20" require="">
-                    <p class="my-1" style="font-style: italic; color: red;">gambar : {{$data_beritas->gambar}}</p>
-                  </div>
-                </div>
+                
               </div>
-              <div class=" d-flex justify-content-end gap-3 mt-2">
-                <a type="button" class="btn btn-primary " href="{{ route('data-berita.dataBerita') }}">Kembali</a>
-                <button class="btn btn-success update-confirm" type="submit">Simpan</button>
+              <div class="mt-5 d-flex justify-content-between ">
+                <a href="{{route('data-berita.dataBerita') }}" class="btn btn-danger"><strong>Kembali</strong></a>
+                <button class="btn btn-primary add-confirm" style="width: 150px;" type="submit"><strong>Simpan</strong></button>
               </div>
             </form>
           </div>
