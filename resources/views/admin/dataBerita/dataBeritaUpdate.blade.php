@@ -87,7 +87,7 @@
               </div>
               <div class="mt-5 d-flex justify-content-between ">
                 <a href="{{route('data-berita.dataBerita') }}" class="btn btn-danger"><strong>Kembali</strong></a>
-                <button class="btn btn-primary add-confirm" style="width: 150px;" type="submit"><strong>Simpan</strong></button>
+                <button class="btn btn-primary update-confirm" style="width: 150px;" type="submit"><strong>Simpan</strong></button>
               </div>
             </form>
           </div>
@@ -98,16 +98,6 @@
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/summernote-lite.min.js"></script>
-    <script>
-      $(document).ready(function() {
-        $('#isi').summernote({
-          placeholder: 'Tulis isi berita di sini...',
-          tabsize: 2,
-          height: 200
-        });
-      });
-    </script>
     <script>
       $('.update-confirm').on('click', function (event) {
       event.preventDefault();

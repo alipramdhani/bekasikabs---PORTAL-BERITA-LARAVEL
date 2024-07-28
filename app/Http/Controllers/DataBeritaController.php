@@ -101,7 +101,7 @@ class DataBeritaController extends Controller
             $data_beritas->editor = $validatedData['editor'];
             $data_beritas->save();
         
-            return redirect()->route('data-berita.dataBerita')->with('status', 'Data berhasil diubah');
+            return redirect()->route('data-berita.dataBerita')->with('success', 'Data berhasil diubah');
     }
     /**
      * Remove the specified resource from storage.

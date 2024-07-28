@@ -13,7 +13,7 @@
               <div class="gradient-overlay rounded-bottom"></div>
             </div>
             <div class="carousel-caption d-none d-md-block">
-              <a class="headline" href="#">{{ $slide->judul_berita }}</a>
+              <a class="headline" href="{{ route('detailBerita.show', $slide->id_berita) }}">{{ $slide->judul_berita }}</a>
               <p class="text-warning">Publish at {{ date('d F Y', strtotime($slide->tanggal)) }}</p>
             </div>
           </div>

@@ -3,7 +3,7 @@
     <div class="footer border">
       <div class="border text-center align-center">
         <a class="navbar-brand logo" href="#">
-            <img src="{{('images/logo-portal.png')}}" alt="">
+            <img src="{{ asset('images/logo-portal.png') }}" alt="">
         </a>
         <p>Copyright © 2024</p>
         <p>www.bekasikab.go.id - All Right Reserved</p>
@@ -20,8 +20,7 @@
           <a href="#" class="logo">
             <img src="{{ asset('images/wmtv.png') }}" alt="">
           </a>
-        </div>
-        
+        </div> 
       </div>
       <div class="sosmed text-center">
         <p>Ikuti Kami</p>

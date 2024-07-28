@@ -2,8 +2,15 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [App\Http\Controllers\NewsController::class, 'index'])->name('home.index');
+// routes/web.php
 
+Route::get('/', [App\Http\Controllers\NewsController::class, 'home'])->name('home.index');
+    Route::get('/kategori/pemerintah', [App\Http\Controllers\NewsController::class, 'pemerintah'])->name('kategori.pemerintah');
+    Route::get('/kategori/hukum', [App\Http\Controllers\NewsController::class, 'hukum'])->name('kategori.hukum');
+    Route::get('/kategori/nasional', [App\Http\Controllers\NewsController::class, 'nasional'])->name('kategori.nasional');
+    Route::get('/kategori/jawabarat', [App\Http\Controllers\NewsController::class, 'jawabarat'])->name('kategori.jawabarat');
+
+Route::get('/detailBerita/{id}', [App\Http\Controllers\NewsController::class, 'show'])->name('detailBerita.show');
 
 Route::post('/logout', [App\Http\Controllers\AuthController::class, 'logout'])->name('admin.logout');
 
@@ -47,6 +54,14 @@ Route::group(['middleware' => 'web'], function () {
         Route::get('/{id}/edit', [App\Http\Controllers\KategoriController::class, 'edit'])->name('data-kategori.edit');
         Route::put('/{id}', [App\Http\Controllers\KategoriController::class, 'update'])->name('data-kategori.update');
         Route::delete('/{id}', [App\Http\Controllers\KategoriController::class, 'destroy'])->name('data-kategori.destroy');
+    });
+
+    // Data Kategori 
+    Route::prefix('admin/data-ulasan')->group(function () {
+        Route::get('/', [App\Http\Controllers\UlasanController::class,
+        'dataUlasan'])->name('data-ulasan.dataUlasan');
+        Route::post('/', [App\Http\Controllers\UlasanController::class, 'store'])->name('data-ulasan.store');
+        Route::delete('/{id}', [App\Http\Controllers\UlasanController::class, 'destroy'])->name('data-ulasan.destroy');
     });
 
 });

@@ -31,7 +31,7 @@
                                 folder_open
                             </span>
                             <span>
-                                Data Berita
+                                Berita
                             </span>
                         </a>
                         <a class="d-flex gap-3 nav-link rounded-2 py-2 px-3 my-2" href="{{route('data-kategori.kategori')}}" style="align-items: center">
@@ -39,7 +39,7 @@
                                 category
                             </span>
                             <span>
-                                Data Kategori
+                               Kategori
                             </span>
                         </a>
                         <a class="d-flex gap-3 nav-link rounded-2 py-2 px-3 my-2" href="{{route('data-admin.dataAdmin')}}"  style="align-items: center">
@@ -47,7 +47,15 @@
                                 manage_accounts
                             </span>
                             <span>
-                                Data Admin
+                                Admin
+                            </span>
+                        </a>
+                        <a class="d-flex gap-3 nav-link rounded-2 py-2 px-3 my-2" href="{{route('data-ulasan.dataUlasan')}}"  style="align-items: center">
+                            <span class="material-symbols-outlined">
+                                reviews
+                            </span>
+                            <span>
+                                Ulasan
                             </span>
                         </a>
                     </ul>  
